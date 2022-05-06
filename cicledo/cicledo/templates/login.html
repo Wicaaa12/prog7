@@ -1,0 +1,83 @@
+<!-- templates/registration/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  {% block content %}
+  <body>
+    <div class="header">
+      <img src="logo.png" class="logo">
+    </div>
+    <div class="logindiv">
+      <h2>Log In</h2>
+      <p>City of Imus Cooperative, Livelihood and Entrepreneurial Development Office</p>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+          <button class="button" type="submit">Log In</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  {% endblock %}
+  <style>
+    body{
+      background-image: url('Imus.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+    }
+
+    .header{
+      overflow: hidden;
+      background-color: #f1f1f1;
+      opacity: 0.5;
+      padding: 10px 10px;
+    }
+
+    .logo{
+      width:100px;height:50px;
+    }
+
+    .logindiv{
+      margin: auto;
+      margin-top: 15%;
+      width: 30%;
+      text-align: center;
+      padding: 50px;
+      background-color: #f1f1f1;
+      opacity: 0.5;
+    }
+
+    .button{
+      margin-top: 10px;
+      width: 20%;
+      text-align: center;
+      background-color: #004aad;
+      padding: 8px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+  </style>
+</html>
+
+
+<!-- {% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="header">
+  <img src="logo.png" class="logo">
+</div>
+<div class="logindiv">
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+{% endblock %} -->
